@@ -1,9 +1,16 @@
 #!/bin/bash
 
-pushd stratos-demo-src/employee
+dev="stratos-app-lcmgt-demo-dev"
+test="stratos-app-lcmgt-demo-test"
+
+pushd application/employee
 mvn clean
 popd
 
-pushd stratos-demo-src/employee-h2
-mvn clean
-popd
+if [ -d ${dev} ]; then
+	rm -rf ${dev}/
+fi
+
+if [ -d ${test} ];  then
+	rm -rf ${test}/ 
+fi

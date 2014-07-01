@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_imesh_sample_employee_domain_Employee" modelAttribute="employee" path="/employees" versionField="Version" z="THHSrHi+AnpxGiODraaSZxtEUcs=">
+        <field:input field="employeeId" id="c_org_imesh_sample_employee_domain_Employee_employeeId" required="true" z="j/r16Rgt422wHUT2Vdmc8DBRxKw="/>
+        <field:input field="name" id="c_org_imesh_sample_employee_domain_Employee_name" z="qVaGqYWcrmmqWjAUOJdfaa63y7U="/>
+        <field:input field="address" id="c_org_imesh_sample_employee_domain_Employee_address" z="DD3kgVLudmiiWtrv2l5sHJG1VUQ="/>
+        <field:input field="email" id="c_org_imesh_sample_employee_domain_Employee_email" validationMessageCode="field_invalid_email" z="omzL4+YEfXLKuFNiBkTaLGEiKw0="/>
+    </form:update>
+</div>

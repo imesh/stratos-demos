@@ -2,8 +2,12 @@
 
 set -e
 
-src="stratos-demo-src/employee"
-test="stratos-demo-test"
+src="application/employee"
+test="stratos-app-lcmgt-demo-test"
+
+if [ ! -d ${test} ]; then
+	git clone https://github.com/imesh/stratos-app-lcmgt-demo-test.git
+fi
 
 pushd $src
 echo "Building application ..."

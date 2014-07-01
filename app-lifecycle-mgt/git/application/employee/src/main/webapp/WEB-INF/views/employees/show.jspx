@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_imesh_sample_employee_domain_Employee" object="${employee}" path="/employees" z="a8MNMyfWlmom50m5gsHCC5Xc0ZM=">
+        <field:display field="employeeId" id="s_org_imesh_sample_employee_domain_Employee_employeeId" object="${employee}" z="Qh3q5VCwVq/Zu4cgf6ct25r8X8c="/>
+        <field:display field="name" id="s_org_imesh_sample_employee_domain_Employee_name" object="${employee}" z="IUYH7t29teDMh3MQBfXr9qorNE0="/>
+        <field:display field="address" id="s_org_imesh_sample_employee_domain_Employee_address" object="${employee}" z="NMX9ePcCTwKouNNEmIw2qFboxBA="/>
+        <field:display field="email" id="s_org_imesh_sample_employee_domain_Employee_email" object="${employee}" z="TBTIi0DJ/z+ddyuL6wYikBq1tSE="/>
+    </page:show>
+</div>

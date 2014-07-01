@@ -1,0 +1,13 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-06-10 07:49:06
+hint
+project --topLevelPackage org.imesh.sample.employee
+jpa setup --database MYSQL --provider ECLIPSELINK 
+entity jpa --class ~.domain.Employee 
+field string --fieldName employeeId --notNull 
+field string --fieldName name
+field string --fieldName address
+field string --fieldName email
+web mvc setup
+web mvc all --package ~.web
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-06-10 07:52:00
