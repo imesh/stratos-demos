@@ -1,0 +1,28 @@
+#!/bin/bash
+
+log="update_server_conf.log"
+server_xml_path="/mnt/apache-tomcat-7-1.0.47/conf/server.xml"
+
+pushd /mnt
+
+METADATA_SERVICE_HOST=`sed 's/,/\n/g' /tmp/payload/launch-params | grep METADATA_SERVICE_HOST | cut -d "=" -f 2`
+export METADATA_SERVICE_HOST
+
+ENVIRONMENT_ID=`sed 's/,/\n/g' /tmp/payload/launch-params | grep ENVIRONMENT_ID | cut -d "=" -f 2`
+export ENVIRONMENT_ID
+
+echo "Reading mysql ip ..." | tee -a ${log}
+eval $(python /mnt/get_mysql_ip.py)
+echo "MySQL ip found: "${MYSQL_HOST} | tee -a ${log}
+
+echo "Reading mysql password ..." | tee -a ${log}
+eval $(python /mnt/get_mysql_pwd.py)
+echo "MySQL password found: "${MYSQL_PASSWORD} | tee -a ${log}
+
+echo "Updating server.xml ..." | tee -a ${log}
+sed -ie "s@__MYSQL_HOST__@${MYSQL_HOST}@g" ${server_xml_path}
+sed -ie "s@__MYSQL_PASSWORD__@${MYSQL_PASSWORD}@g" ${server_xml_path}
+
+echo "MySQL ip updated!" | tee -a ${log}
+
+popd

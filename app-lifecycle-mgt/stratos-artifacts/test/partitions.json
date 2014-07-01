@@ -1,0 +1,16 @@
+{
+      "id": "us-east-1a",
+      "provider": "ec2",
+      "property": [
+          {
+            "name": "region",
+            "value": "us-east-1"
+          },
+          {
+            "name": "zone",
+            "value": "us-east-1a"
+          }
+      ],
+      "partitionMin": "1",
+      "partitionMax": "3" 
+}

@@ -1,0 +1,14 @@
+{
+    "id": "us-east-1a_min-1-max-5",
+    "partitionGroup": {
+      "id": "partition-group1",
+      "partitionAlgo": "one-after-another",
+      "partition": [
+        {
+          "id": "us-east-1a",
+          "partitionMax": "5",
+          "partitionMin": "1"
+        }
+      ]
+    }
+}
